@@ -4,21 +4,14 @@ This project implements the Markowitz Mean-Variance Optimization framework in Py
 Mathematical Framework
 To derive the optimal portfolio, the project utilizes the following quantitative foundations. Asset Returns are calculated as daily percentage changes to standardize asset performance, while the Covariance Matrix ($$\Sigma$$) is used to quantify the interdependencies between asset classes, enabling effective diversification. Portfolio Risk is defined as 
 
-   $$ \sigma_p = \sqrt{w^T \Sigma w} $$, 
+   $$ \sigma_p = \sqrt{w^T \Sigma w} $$
    
 Where $$w$$ is the vector of asset weights and $$\Sigma$$ is the covariance matrix.
-   
-Optimization: The project employs the Sequential Least Squares Programming (SLSQP) algorithm via scipy.optimize to maximize the Sharpe Ratio, defined as:
+The project employs the Sequential Least Squares Programming (SLSQP) algorithm via scipy.optimize to maximize the Sharpe Ratio, defined as:
 
 $$ S = \frac{R_p - R_f}{\sigma_p} $$
    
 Where $R_p$ is portfolio return and $R_f$ is the risk-free rate.
 
-Visualization: The Efficient Frontier
-The Efficient Frontier represents the set of optimal portfolios that offer the highest expected return for a defined level of risk.
-Key Insights & Findings
- * **Diversification Strategy:** By analyzing the covariance matrix, the model quantitatively validates why assets with low correlation (e.g., Gold vs. Tech stocks) are critical for minimizing portfolio variance.
- * **Algorithmic Allocation:** The optimization process successfully determined non-intuitive weightings that theoretically outperform a simple equal-weighted strategy.
-Technical Stack
- * **Language:** Python 3.x
- * **Libraries:** yfinance (Data acquisition), Pandas/NumPy (Data manipulation & Matrix Algebra), SciPy (Optimization), Matplotlib (
+Regarding methodology and data, I utilized the ⁠yfinance⁠ library to fetch historical stock data directly from Yahoo Finance APIs, chosen for its reliability and breadth. I used ⁠pandas⁠ and ⁠numpy⁠ for data manipulation, specifically to calculate daily percentage returns, as these are industry standards for time-series analysis due to their efficient vectorized operations. The core of the model relies on the ⁠scipy.optimize⁠ library, specifically using the ⁠SLSQP⁠ algorithm because it is highly effective at solving constrained optimization problems, such as ensuring that the sum of all asset weights equals \bm{1}. Finally, I implemented ⁠matplotlib⁠ to render the Efficient Frontier, providing a clear visual representation of the trade-off between volatility and expected return.
+The analysis led to two primary insights. First, regarding diversification strategy, the model quantitatively validates why assets with low correlation, such as Gold versus Tech stocks, are critical for minimizing portfolio variance. Second, the algorithmic allocation process successfully determined non-intuitive weightings that theoretically outperform a simple equal-weighted strategy. The project was developed using Python 3.x and relies on the ⁠yfinance⁠, ⁠Pandas⁠, ⁠NumPy⁠, ⁠SciPy⁠, and ⁠Matplotlib⁠ libraries.
