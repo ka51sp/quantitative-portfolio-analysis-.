@@ -3,6 +3,7 @@ This project implements the Markowitz Mean-Variance Optimization framework in Py
 
 Mathematical Framework
 To derive the optimal portfolio, the project utilizes the following quantitative foundations. Asset Returns are calculated as daily percentage changes to standardize asset performance, while the Covariance Matrix ($$\Sigma$$) is used to quantify the interdependencies between asset classes, enabling effective diversification. Portfolio Risk is defined as 
+
    $$ \sigma_p = \sqrt{w^T \Sigma w} $$, 
    
 Where $$w$$ is the vector of asset weights and $$\Sigma$$ is the covariance matrix.
