@@ -1,6 +1,7 @@
 
 This project implements the Markowitz Mean-Variance Optimization framework in Python to construct an efficient investment portfolio. The primary goal is to demonstrate how matrix algebra and computational optimization can be used to navigate the trade-off between risk and reward in financial markets.
-2. Mathematical Framework
+
+Mathematical Framework
 To derive the optimal portfolio, the project utilizes the following quantitative foundations:
  * **Asset Returns:** Calculated as daily percentage changes to standardize asset performance.
  * **Covariance Matrix ($$\Sigma$$):** Used to quantify the interdependencies between asset classes, enabling effective diversification.
