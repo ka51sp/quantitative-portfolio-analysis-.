@@ -1,5 +1,5 @@
 
-This project implements the Markowitz Mean-Variance Optimization framework in Python to construct an efficient investment portfolio. The primary goal is to demonstrate how matrix algebra and computational optimization can be used to navigate the trade-off between risk and reward in financial markets.
+This project implements the Markowitz Mean-Variance Optimization framework in Python to construct an efficient investment portfolio. The primary goal is to demonstrate how matrix algebra and computational optimization can be used to navigate the trade-off between risk and reward in financial markets. I developed this project to explore how algorithmic decision-making models, commonly used in institutional fintech, can mitigate risk in volatile markets. I chose to implement the Mean-Variance Optimization (MVO) model because it bridges the gap between academic portfolio theory and practical data science. By utilizing Matrix Algebra to process the covariance matrix, this model quantifies the impact of diversification, demonstrating that the optimal portfolio is not merely the collection of highest-performing assets, but the combination that minimizes risk through non-correlated asset movement.
 
 Mathematical Framework
 To derive the optimal portfolio, the project utilizes the following quantitative foundations:
